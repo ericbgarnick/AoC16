@@ -6,6 +6,9 @@ class FloorTile:
     def __init__(self, is_safe: bool):
         self.is_safe = is_safe
 
+    def __eq__(self, other):
+        return self.is_safe == other.is_safe
+
     def __repr__(self):
         return '.' if self.is_safe else '^'
 
